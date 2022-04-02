@@ -82,7 +82,7 @@ console.log(video.duration)
 	console.log("New location " +video.currentTime)
 	var update= video.currentTime
 
-if (video.duration-update<15){
+if (video.duration==update){
 	video.currentTime=0;
 }
 
