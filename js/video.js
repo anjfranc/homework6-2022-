@@ -76,15 +76,20 @@ document.querySelector("#slider").addEventListener("click", function()
 
 document.querySelector("#skip").addEventListener("click", function()
 {
-	var orig= video.currentTime
+console.log(video.duration)
 	console.log("Original location " + video.currentTime)
 	video.currentTime+=15;
 	console.log("New location " +video.currentTime)
 	var update= video.currentTime
 
-if (orig==update){
-video.currentTime=0
+if (video.duration-update<15){
+	video.currentTime=0;
 }
+
+// if (orig==update){
+// video.currentTime=0
+// video.play()
+// }
 
 
 });
